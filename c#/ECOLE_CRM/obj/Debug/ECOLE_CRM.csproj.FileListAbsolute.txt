@@ -1,0 +1,38 @@
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\bin\Debug\ECOLE_CRM.exe
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\bin\Debug\ECOLE_CRM.pdb
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\obj\Debug\ECOLE_CRM.Properties.Resources.resources
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\obj\Debug\ECOLE_CRM.Splash.resources
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\obj\Debug\ECOLE_CRM.csproj.GenerateResource.Cache
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\obj\Debug\ECOLE_CRM.exe
+C:\Users\daneel\AppData\Local\Temporary Projects\ECOLE_CRM\obj\Debug\ECOLE_CRM.pdb
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.exe
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.pdb
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\bin\Debug\ECOLE_CRM.exe
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\bin\Debug\ECOLE_CRM.pdb
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Properties.Resources.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Splash.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.csproj.GenerateResource.Cache
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Errors.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\bin\Debug\ECOLE_CRM.exe.config
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Etudiant_Update.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Etudiant_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Eudiant_New.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Prof_Update.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Cours_Update.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.CoursEtudiant_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Cours_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.EtudiantCours_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.ProfCoursEtudiant_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.ProfCours_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Prof_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.InscriptionCoursProfEtudiant_View.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.InscriptionNewEtudiant_C_Update.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.InscriptionEtudiant_C_Update.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.Inscription_NC_Update.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.InscriptionEtudiant_NC_ListBox.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.BAK_InscriptionEtudiant_NC_DataGridView.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.InscriptionEtudiant_NC_DataGridView.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.InscriptionUpdate_Test1.resources
+C:\Users\daneel\Documents\Visual Studio 2008\Projects\ECOLE_CRM\ECOLE_CRM\obj\Debug\ECOLE_CRM.InscriptionUpdate_Test2.resources
