@@ -20,7 +20,6 @@ $( document ).ready(function() {
   $("#result").text('disk size = ' + disk.size);
   disk.limits = [2,4,7];
 
-  var cluster = 0;
   // create partitions and calculate each size
   for (var limitKey in disk.limits){
    console.log(disk.limits[limitKey]);
@@ -29,11 +28,12 @@ $( document ).ready(function() {
    if(limitKey == 0){
    	p.isFirst = true;
    	p.size = disk.limits[limitKey];
-   	cluster += p.size;
+    p.limits = [0, disk.limits[limitKey]];
    	console.log('is FIRST');
    // in between, do nothing, initialized to false
    }else{
    	p.size = disk.limits[limitKey] - disk.limits[limitKey - 1];
+    p.limits = [disk.limits[limitKey - 1], disk.limits[limitKey]];
    }
    
    disk.partitions.push(p);
@@ -44,6 +44,7 @@ $( document ).ready(function() {
   var p = new Partition();
   p.isLast = true;
   p.size = disk.size - disk.limits[disk.limits.length - 1];
+  p.limits = [disk.limits[limitKey], disk.size - 1];
   console.log('is LAST');
   disk.partitions.push(p);
 
