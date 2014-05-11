@@ -57,13 +57,16 @@ function Disk(){
     var parent = this; // need this to reference in .each context
     // input 3: partitions limits on the disk
     $("#diskPartitionsLimits input.diskLimits").each(function(index) {
-      console.log($(this));
       if($(this).val() != ''){
         this.limits.push($(this).val());  
       }else{
-        parent.limits.push(parent.defaultLimits[index]);
-        // reflect default on the view
-        $(this).val(parent.defaultLimits[index]);  
+        if(parent.defaultLimits[index] != undefined){
+          parent.limits.push(parent.defaultLimits[index]);
+            // reflect default on the view
+          $(this).val(parent.defaultLimits[index]);  
+        }else{
+          // @TODO random value
+        }
       }
     });
   }
@@ -103,7 +106,7 @@ function Disk(){
    * Renders the disk view
    */
   this.renderDiskView = function(){
-    $("#diskResult").text('[ Disk size = ' + this.size + ' - Number of partitions = ' + (this.nCuts+1) + ' ]');
+    $("#diskResult").text('[ Disk size = ' + this.size + ' - Number of partitions = ' + (parseInt(this.nCuts)+1) + ' ]');
   }
 
   /**
