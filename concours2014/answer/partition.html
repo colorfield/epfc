@@ -32,7 +32,40 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-        	<p id="result"></p>
+          <!-- Input -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Disk properties</h3>
+            </div>
+            <div class="panel-body">
+              <form id="diskInput">
+                <h4>Disk</h4>
+                <label for="diskSize">Size</label> <input type="number" id="diskSize" name="diskSize" value="" min="1" max="1000">
+                <label for="diskNCuts">Number of cuts</label> <input type="number" id="diskNCuts" name="diskNCuts" value="" min="1" max="50">
+                <h4>Partitions limits</h4>
+                <p id="diskPartitionsLimits">
+                </p>
+              </form>
+            </div>
+          </div>
+          <!-- Disk -->
+        	<div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Disk result</h3>
+            </div>
+            <div class="panel-body">
+              <p id="diskResult"></p>
+            </div>
+          </div>
+          <!-- Partitions -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Partitions result</h3>
+            </div>
+            <div class="panel-body">
+              <p id="partitionsResult"></p>
+            </div>
+          </div>
         </div><!-- /.col-sm-12 -->
       </div>
 
