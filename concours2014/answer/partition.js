@@ -8,6 +8,15 @@ function Partition(){
 	this.limits = [];
 }
 
+
+/**
+ * Resolves partition problem
+ */
+function ResolvePartition(disk){
+  
+}
+
+
 /**
  * Disk class
  * @TODO needs MVC refactoring
@@ -22,6 +31,8 @@ function Disk(){
   this.defaultNCuts = 3;
   this.defaultLimits = [2,4,7]; // assumes that length matches defaultNCuts
   this.init = true;
+
+  this.maxSize = 0;
 
   // @TODO set main events handlers on the constructor
 
@@ -56,9 +67,11 @@ function Disk(){
   this.readPartitionsPropertiesFromInput = function(){
     var parent = this; // need this to reference in .each context
     // input 3: partitions limits on the disk
+    console.log("Limits");
+    console.log(this.limits);
     $("#diskPartitionsLimits input.diskLimits").each(function(index) {
       if($(this).val() != ''){
-        this.limits.push($(this).val());  
+        parent.limits.push($(this).val());  
       }else{
         if(parent.defaultLimits[index] != undefined){
           parent.limits.push(parent.defaultLimits[index]);
@@ -69,6 +82,7 @@ function Disk(){
         }
       }
     });
+    console.log(this.limits);
   }
 
   /**
@@ -77,7 +91,6 @@ function Disk(){
   this.createPartitionLimitsView = function(){
     var html = '';
     for (var i = 1; i <= this.nCuts; i++) { 
-      console.log("I = " + i);
       html += '<label for="diskLimit'+i+'">Limit '+i+'</label> <input type="number" id="diskLimit'+i+'" class="diskLimits" name="diskLimit'+i+'" value="" min="1" max="1000"><br>';
     }
     $('#diskPartitionsLimits').html(html);
@@ -89,7 +102,8 @@ function Disk(){
    */
   this.refresh = function(){
     // do not trigger if values did not changed
-    if(this.init || $("#diskInput #diskSize").val() != this.size || $("#diskInput #diskNCuts").val() != this.nCuts){
+    //if(this.init || $("#diskInput #diskSize").val() != this.size || $("#diskInput #diskNCuts").val() != this.nCuts){
+      alert("Refresh");
       this.init = false;
       this.initProperties();
       this.readDiskPropertiesFromInput();
@@ -98,22 +112,47 @@ function Disk(){
       this.readPartitionsPropertiesFromInput();
       this.createPartitionsModel();
       this.renderDiskView();
-      this.renderPartitionsView();  
-    }
+      this.renderPartitionsView();
+    //}
   }
 
   /**
    * Renders the disk view
    */
   this.renderDiskView = function(){
-    $("#diskResult").text('[ Disk size = ' + this.size + ' - Number of partitions = ' + (parseInt(this.nCuts)+1) + ' ]');
+    var html = '[ Disk size = ' + this.size + ' - Number of partitions = ' + (parseInt(this.nCuts)+1) + ' ]';
+    $("#diskResult").html(html);
+  }
+
+
+  /**
+   * Populates the max size value
+   */
+  this.getMaxPartitionSize = function(){
+    for(i in this.partitions){
+      if(this.partitions[i].size > this.maxSize){
+        this.maxSize = this.partitions[i].size;
+      }
+    }
   }
 
   /**
    * Renders the partitions view
    */
   this.renderPartitionsView = function(){
-    $("#partitionsResult").text('todo');
+    var html = '<table class="table">';
+    for(p in this.partitions){
+      html += '<tr>';
+      for (var i = 1; i <= this.maxSize; i++) {
+        if(i <= this.partitions[p].size){
+          html += '<td>1</td>';
+        }else{
+          html += '<td>0</td>';
+        }
+      }
+    }
+    html += '</table>';
+    $("#partitionsResult").html(html);
   }
 
   /**
@@ -124,6 +163,8 @@ function Disk(){
     this.nCuts =  0;
     this.limits = [];
     this.partitions = [];
+
+    this.maxSize = 0;
   }
 
 
@@ -157,6 +198,8 @@ function Disk(){
     console.log('is LAST');
     this.partitions.push(p);
 
+    this.getMaxPartitionSize();
+
     console.log(this.partitions);
   }
 };
@@ -175,7 +218,8 @@ $( document ).ready(function() {
      disk.refresh();
   }).trigger('change'); // to handle default values
   
-  $("#diskInput .diskLimits").change(function() {
+  // using on (olde "live") for js created DOM elements
+  $("#diskPartitionsLimits input.diskLimits").on("input", function() {
      disk.refresh();
   }).trigger('change'); // to handle default values
 
