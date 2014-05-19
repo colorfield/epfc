@@ -1,21 +1,80 @@
+//--------------------------------------------
+//
+// Backtracking test of subsets generation
+//
+//--------------------------------------------
+
+var set = ['a','b','c','d','e'];
+var v = new Array(); // no type, can handle boolean or letters with the tests below
+var n = 5; // number of combinations
+
 /**
- * Partition class
+ * Displays the combination result
  */
-function Partition(){
-	this.size = 0;
-	this.isFirst = false;
-	this.isLast = false;
-	this.limits = [];
+function displayWords(){
+  var output = '';
+  for (var i = 0; i < n; ++i) {
+    output += v[i] + ', ';
+  }
+  console.log(output);
 }
 
+/**
+ * Combines sets of booleans
+ */
+function binary_words(i){
+  if(parseInt(i) == parseInt(n)){
+    displayWords();
+  }else{
+    v[i] = true;
+    binary_words(i+1);
+    v[i] = false;
+    binary_words(i+1);
+  }
+}
+
+/**
+ * Combines sets of letters
+ */
+function words(i){
+  if(parseInt(i) == parseInt(n)){
+    displayWords();
+  }else{
+    for (var s = 0; s < set.length; ++s) {
+        v[i] = set[s];
+        words(i+1);  
+    }
+  }
+}
+
+
+/**
+ * Generates subsets
+ */
+function generateSubsets(){
+  //binary_words(0);
+  words(0);
+}
+
+
+//----------------------------------------
 
 /**
  * Resolves partition problem
  */
-function ResolvePartition(disk){
-  
+function resolvePartition(disk){
+  var subsets = generateSubsets();
 }
 
+/**
+ * Partition class
+ */
+function Partition(){
+  this.size = 0;
+  this.isFirst = false;
+  this.isLast = false;
+  this.limits = [];
+}
 
 /**
  * Disk class
@@ -103,7 +162,7 @@ function Disk(){
   this.refresh = function(){
     // do not trigger if values did not changed
     //if(this.init || $("#diskInput #diskSize").val() != this.size || $("#diskInput #diskNCuts").val() != this.nCuts){
-      alert("Refresh");
+      //alert("Refresh");
       this.init = false;
       this.initProperties();
       this.readDiskPropertiesFromInput();
@@ -113,6 +172,8 @@ function Disk(){
       this.createPartitionsModel();
       this.renderDiskView();
       this.renderPartitionsView();
+      resolvePartition();
+
     //}
   }
 
@@ -181,7 +242,7 @@ function Disk(){
       p.isFirst = true;
       p.size = this.limits[limitKey];
       p.limits = [0, this.limits[limitKey]];
-      console.log('is FIRST');
+      //console.log('is FIRST');
      // in between, do nothing, initialized to false
      }else{
       p.size = this.limits[limitKey] - this.limits[limitKey - 1];
@@ -195,7 +256,7 @@ function Disk(){
     p.isLast = true;
     p.size = this.size - this.limits[this.limits.length - 1];
     p.limits = [this.limits[limitKey], this.size - 1];
-    console.log('is LAST');
+    //console.log('is LAST');
     this.partitions.push(p);
 
     this.getMaxPartitionSize();
@@ -214,14 +275,17 @@ $( document ).ready(function() {
      disk.refresh();
   }).trigger('change'); // to handle default values
 
+  // @todo
+  /*
   $("#diskInput #diskNCuts").change(function() {
      disk.refresh();
   }).trigger('change'); // to handle default values
-  
-  // using on (olde "live") for js created DOM elements
+  */
+  /*
+  // using on (old "live") for js created DOM elements
   $("#diskPartitionsLimits input.diskLimits").on("input", function() {
      disk.refresh();
   }).trigger('change'); // to handle default values
-
+  */
 
 });
