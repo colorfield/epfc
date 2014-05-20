@@ -1,63 +1,9 @@
-//--------------------------------------------
-//
-// Backtracking test of subsets generation
-//
-//--------------------------------------------
-
-var set = ['a','b','c','d','e'];
-var v = new Array(); // no type, can handle boolean or letters with the tests below
-var n = 5; // number of combinations
-
-/**
- * Displays the combination result
- */
-function displayWords(){
-  var output = '';
-  for (var i = 0; i < n; ++i) {
-    output += v[i] + ', ';
-  }
-  console.log(output);
-}
-
-/**
- * Combines sets of booleans
- */
-function binary_words(i){
-  if(parseInt(i) == parseInt(n)){
-    displayWords();
-  }else{
-    v[i] = true;
-    binary_words(i+1);
-    v[i] = false;
-    binary_words(i+1);
-  }
-}
-
-/**
- * Combines sets of letters
- */
-function words(i){
-  if(parseInt(i) == parseInt(n)){
-    displayWords();
-  }else{
-    for (var s = 0; s < set.length; ++s) {
-        v[i] = set[s];
-        words(i+1);  
-    }
-  }
-}
-
-
 /**
  * Generates subsets
  */
 function generateSubsets(){
-  //binary_words(0);
-  words(0);
+  
 }
-
-
-//----------------------------------------
 
 /**
  * Resolves partition problem
